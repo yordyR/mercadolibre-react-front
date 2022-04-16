@@ -1,0 +1,136 @@
+body
+  margin: 0px
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  font-family Proxima Nova , -apple-system, Helvetica Neue, Helvetica,Roboto,Arial,sans-serif,sans-serif
+  background-color: #EEEEEE !important
+
+.bg-yellow
+  background-color: #FFE600
+.bl-breadcrunb
+  & .breadcrumb
+    margin:  16px 0
+    --bs-breadcrumb-divider: ''
+  & .breadcrumb-item
+    color: #999999
+    font-size: 14px
+    &:last-child
+      color: #999999
+      font-weight: bold
+      & svg
+        display: none
+  &::before
+    padding-right: 0rem !important
+  & svg
+    padding-left: 5px
+
+.bl-detailProduct
+  &--description
+    padding-left: 32px
+    padding-bottom: 32px
+    padding-top: 32px
+    &-texto
+      padding-top: 32px
+  &--title
+    margin-bottom: 32px
+    margin-top: 32px
+    & h1
+      font-weight: bold
+  &--buy
+    padding-right: 32px
+  &--image
+    width: 680px
+    margin: 32px 0 auto auto
+    display: block
+
+.bl-products
+  &--picture
+    padding: 16px 16px 16px 4px
+    & img 
+      width: 180px
+      height: 180px
+      border-radius: 4px
+  &--tittle
+    margin-bottom: 32px
+    color: #333333
+  &--link
+    text-decoration: none
+  &--description
+    color: #333333
+  &--city
+    color: #666666
+  &--content
+    padding-left: 25px
+
+
+.btn
+  &.btn-primary
+    background-color: #3483FA
+    border-color: #3483FA
+
+.f-size
+  &-12px
+    font-size: 12px
+  &-14px
+    font-size: 14px
+  &-16px
+    font-size: 16px
+  &-18px
+    font-size: 18px
+  &-24px
+    font-size: 24px
+  &-28px
+    font-size: 28px
+  &-46px
+    font-size: 46px
+
+  
+header 
+  .form-control
+    &:focus
+      box-shadow: none
+
+.spinner
+  width: 50px
+  height: 50px
+  position: relative
+  margin: 0 auto
+  &::before, &::after
+    content: ""
+    position: absolute
+    width: inherit
+    height: inherit
+    border-radius: 50%
+    mix-blend-mode: multiply
+    animation: rotate 1s infinite cubic-bezier(0.77, 0, 0.175, 1)
+  &::before
+    background-color: #FFE600
+  &::after
+    background-color: #273674
+    animation-delay: .5s
+@keyframes rotate
+  0%, 100%
+    left: 95px
+  25%
+    transform: scale(.3)
+  50%
+    left: 0
+  75%
+    transform: scale(.1)
+
+
+@media (max-width: 1024px)
+  .bl-detailProduct
+    &--image
+      width: 100%
+
+@media (max-width: 768px)
+  .bl-breadcrunb
+    margin-top: 32px
+    & .breadcrumb
+      display: none
+  .bl-products
+    &--picture
+      & img
+        margin: 0 auto
+        display: block
